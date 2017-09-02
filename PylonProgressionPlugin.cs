@@ -4,7 +4,7 @@ using System.Linq;
 using Turbo.Plugins.Default;
 using System.Reflection;
 
-namespace Turbo.Plugins.KomariSpaghetti
+namespace Turbo.Plugins.KomariSpaghettisTurboHUDPlugins
 {
     public class PylonProgressionPlugin : BasePlugin, IInGameWorldPainter
 	{
