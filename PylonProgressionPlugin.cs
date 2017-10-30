@@ -7,7 +7,7 @@ using System.Reflection;
 namespace Turbo.Plugins.KomariSpaghettisTurboHUDPlugins
 {
     public class PylonProgressionPlugin : BasePlugin, IInGameWorldPainter
-	{
+    {
         public HashSet<ShrineType> Pylons { get; set; }
         public Dictionary<ShrineType, string> Names { get; set; } 
         public Dictionary<ShrineType, double> FoundPercentages { get; set; } 
@@ -15,7 +15,7 @@ namespace Turbo.Plugins.KomariSpaghettisTurboHUDPlugins
         public IFont PylonProgressionPluginFont { get; set; }
 
         public PylonProgressionPlugin()
-		{
+        {
             Enabled = true;
             FoundPercentages = new Dictionary<ShrineType, double>();
             Names = new Dictionary<ShrineType, string>();
@@ -27,7 +27,7 @@ namespace Turbo.Plugins.KomariSpaghettisTurboHUDPlugins
                 ShrineType.SpeedPylon,
                 ShrineType.ChannelingPylon,
             };
-		}
+        }
 
         public override void Load(IController hud)
         {
@@ -35,8 +35,8 @@ namespace Turbo.Plugins.KomariSpaghettisTurboHUDPlugins
             PylonProgressionPluginFont = Hud.Render.CreateFont("tahoma", 7, 255, 255, 210, 150, true, false, 160, 0, 0, 0, true);
         }
 
-		public void PaintWorld(WorldLayer layer)
-		{
+        public void PaintWorld(WorldLayer layer)
+        {
             IUiElement ui = null;
             switch (Hud.Game.SpecialArea)
             {
